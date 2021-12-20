@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+body {
+  background-color: #F4F4F4;
+  padding: 50px;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 900;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.green-button {
+  background-color: #198754;
+  box-shadow: 2px 2px 4px #3c3c3c13;
+  border-radius: 4px;
   color: white;
+  padding: 10px;
+  width: 200px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.green-button:hover {
+  background-color: #4ea07a;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sort-on {
+  cursor: pointer;
+  width: 0; 
+  height: 0; 
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 15px solid #000000;
+  margin-left: 10px;
+  animation: .4s growSorter;
+}
+
+.sort-off {
+  cursor: pointer;
+  width: 0; 
+  height: 0; 
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 15px solid #000000;
+  position: relative;
+  margin-left: 10px;
+}
+
+.sort-off::before {
+  cursor: pointer;
+  content: '';
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 12px solid #F4F4F4;
+  position: absolute;
+  bottom: 1.9px;
+  right: -10px;
+  animation: .4s growSorter;
+}
+
+@keyframes growSorter {
+  0% {
+    transform: scale(0);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: scale(1);
   }
 }

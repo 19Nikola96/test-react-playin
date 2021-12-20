@@ -1,0 +1,57 @@
+.products {
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-shadow: 2px 2px 4px #3c3c3c13;
+}
+
+.products table {
+    border-collapse: collapse;
+    color: black;
+    display: block;
+    font-size: 19px;
+    border: 1px solid #F4F4F4;
+    overflow: auto;
+}
+
+.products table thead tr {
+    background-color: #F4F4F4;
+}
+
+.products table thead tr th {
+    text-align: start;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
+}
+
+.products table thead tr th:nth-of-type(1) {
+    width: 200px;
+}
+
+.products table thead tr th:nth-of-type(2) {
+    width: 300px;
+}
+
+.products table thead tr th:nth-of-type(3) {
+    width: 100%;
+}
+
+.products table thead tr th div {
+    display: flex;
+}
+
+.products .more-products {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    background-color: white;
+    border: 1px solid #C4C4C4;
+    box-shadow: 2px 2px 4px #ECECEC;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 20px auto 0;
+    display: block;
+    cursor: pointer;
+}
